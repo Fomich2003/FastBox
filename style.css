@@ -109,6 +109,60 @@ header button {
     transform: rotate(-45deg) transLate(11px, -11px);
 }
 
+/* Hero */
+
+.hero {
+    background: #FFFAE3;
+}
+
+.hero__wrapper {
+    height: 100vh;
+    padding: 130px 0 0 0;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.hero__content span {
+    color: #8E344D;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero__content h1 {
+    font-weight: 600;
+    font-size: 68px;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+.hero__content p {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.hero__content button {
+    height: 48px;
+    font-size: 22px;
+    font-weight: 700;
+    width: 280px;
+}
+
+.hero__image {
+    background: #8E344D;
+    padding: 35px;
+    border-radius: 10px;
+    height: 400px;
+    width: 520px;
+}
+
+.hero__image img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
 @media all and (max-width: 940px) {
     .burger {
         display: flex;
@@ -137,6 +191,45 @@ header button {
     header nav.active {
         left: 0;
     }
+.hero__wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 100px 0;
+}
+.hero__content {
+    order: 2;
+    text-align: center;
+}
+.hero__content h1 {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.hero__image {
+    margin: 0 auto;
+    order: 1;
+    margin-bottom: 100px;
+}
+.hero__image {
+    width: 100%;
+    height: fit-content;
+    background: Linear-gradient(to bottom, #8E344D 50%, transparent 50%);
+    margin: 0 auto;
+    padding: 15px;
+}
+}
+
+@media all and (max-height: 680px) {
+    .hero__wrapper {
+        padding: 100px 0 0;
+    }
+    .hero__image {
+        width: 100%;
+        max-width: 420px;
+        height: fit-content;
+        background: Linear-gradient(to bottom, #8E344D 50%, transparent 50%);
+        margin: 0 auto;
+        padding: 15px;
+    }
 }
 
 @media all and (max-width: 640px) {
@@ -146,5 +239,15 @@ header button {
 
     header button {
         display: none;
+    }
+
+    .hero__wrapper {
+        padding: 80px 0;
+    }
+    .hero__content h1 {
+       font-size: 32px;
+    }
+    .hero__content p {
+       font-size: 18px;
     }
 }
