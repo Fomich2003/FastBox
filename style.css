@@ -18,6 +18,13 @@
     display: flex;
 }
 
+h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
 .btn{
     height: 38px;
     border-radius: 10px;
@@ -44,6 +51,7 @@ header {
     top: 0;
     left: 0;
     background: #FFFAE3;
+    z-index: 2;
 }
 
 .header_wrapper {
@@ -78,7 +86,7 @@ header button {
 
 .burger {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     height: 36px;
     width: 42px;
     display: none;
@@ -163,6 +171,120 @@ header button {
     width: 100%;
     height: auto;
 }
+
+/* Service */
+
+.services {
+    padding: 120px 0;
+    position: relative;
+}
+
+.service__figures figure{
+    position: absolute;
+    z-index: -1;
+}
+
+.service__figures figure:nth-child(1) {
+    top: 300px;
+    left: 20px;
+}
+
+.service__figures figure:nth-child(2) {
+    top: 190px;
+    left: 80px;
+}
+
+.service__figures figure:nth-child(3) {
+    top: 80px;
+    left: 10px;
+}
+
+.service__figures figure:nth-child(4) {
+    top: -45px;
+    left: 50px;
+}
+
+.service__figures figure:nth-child(5) {
+    bottom: 300px;
+    right: 20px;
+}
+
+.service__figures figure:nth-child(6) {
+    bottom: 190px;
+    right: 80px;
+}
+
+.service__figures figure:nth-child(7) {
+    bottom: 80px;
+    right: 10px;
+}
+
+.service__figures figure:nth-child(8) {
+    bottom: -45px;
+    right: 20px;
+}
+
+.service__list {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.service__list-item {
+    width: 260px;
+    background: #FFFAE3;
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px #c9c19c;
+}
+
+.service__list-item .btn {
+    width: 100%;
+}
+
+.service__list-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.service__list-item h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.service__list-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* About */
+ 
+.about {
+    padding: 120px 0;
+    position: relative;
+    background: #FFFAE3;
+}
+
+.about img {
+        padding: 35px;
+        border-radius: 10px;
+        height: 400px;
+        width: 520px;
+}
+
+.about__content p {
+   font-size: 18px;
+   font-weight: 600;
+}
+
+
+
+
 @media all and (max-width: 940px) {
     .burger {
         display: flex;
@@ -249,5 +371,8 @@ header button {
     }
     .hero__content p {
        font-size: 18px;
+    }
+    .service__figures figure {
+       display: none;
     }
 }
