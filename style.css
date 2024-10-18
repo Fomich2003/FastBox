@@ -12,6 +12,31 @@ html {
     scroll-padding-top: 50px;
 }
 
+body::-webkit-scrollbar {
+    background: #8E344D;
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #FFFAE3;
+    border: 2px solid #8E344D;
+    border-radius: 5px;
+}
+
+body {
+    padding: 0;
+    overflow: auto;
+}
+
+body.fixed {
+    border-right: 10px solid #8E344D;
+    overflow: hidden;
+}
+
+body.fixed header {
+    border-right: 10px solid #8E344D;
+}
+
 .container {
     margin: 0 auto;
     width: 100%;
@@ -601,6 +626,59 @@ footer {
     display: block;
 }
 
+/* Modal */
+
+.modal {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.modal__window{
+    padding: 30px;
+    border-radius: 10px;
+    background: #FFFAE3;
+    position: relative;
+    transition: all 0.3s;
+    transform: scale(0.01);
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.modal__window h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.modal.active {
+    z-index: 100;
+    opacity: 1;
+}
+.modal.active .modal__window {
+    transform: scale(1);
+}
+
 .address, .phone, .email, .graph {
     width: 300px;
 }
@@ -645,6 +723,16 @@ footer {
 }
 
 @media all and (max-width: 940px) {
+    body.fixed {
+        border-right: 0px solid #8E344D;
+        overflow: hidden;
+    }
+    body.fixed header {
+        border-right: 0px solid #8E344D;
+    }
+    body::-webkit-scrollbar {
+        width: 0;
+    }
     .burger {
         display: flex;
     }
@@ -720,6 +808,19 @@ footer {
         background: Linear-gradient(to bottom, #8E344D 50%, transparent 50%);
         margin: 0 auto;
         padding: 15px;
+    }
+
+    .modal__window{
+     padding: 15px;
+    }
+    .modal__window input {
+        height: 42px !important;
+    }
+    .modal__window h2 {
+        font-size: 24px !important;
+    }
+    .modal__window .btn{
+        height: 42px !important;
     }
 }
 
@@ -803,8 +904,8 @@ footer {
     }
 
     .slide_stars img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
     h2 {
         font-size: 28px !important;

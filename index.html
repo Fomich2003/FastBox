@@ -33,7 +33,7 @@
                     <a href="#reviews">Відгуки</a>
                     <a href="#footer">Контакти</a>
                 </nav>
-                <button class="btn">Замовити доставку</button>
+                <button class="btn" id="open-modal">Замовити доставку</button>
                 <div class="burger">
                     <figure></figure>
                     <figure></figure>
@@ -53,7 +53,7 @@
                         <h1>Отримай доставку їжі <br> і не тільки</h1>
                         <p> Якщо ти це хочеш? <br>
                             Ми це доставимо. Швидко та надійно</p>
-                        <button class="btn">Замовити доставку</button>
+                        <button class="btn" id="open-modal">Замовити доставку</button>
                     </div>
                     <div class="hero__image">
                         <img src="./assets/img/hero.webp" alt="">
@@ -70,14 +70,14 @@
                         <img src="./assets/icons/health.svg" alt="icon">
                         <h3>Доставка ліків</h3>
                         <p>Потрібних ліків немає, ми доставимо їх дуже швидко</p>
-                        <button class="btn">Замовити доставку</button>
+                        <button class="btn" id="open-modal">Замовити доставку</button>
                     </div>
 
                     <div class="service__list-item">
                         <img src="./assets/icons/delivery.svg" alt="icon">
                         <h3>Доставка товарів</h3>
                         <p>Доставимо товари всіх габаритів</p>
-                        <button class="btn">Замовити доставку</button>
+                        <button class="btn" id="open-modal">Замовити доставку</button>
                     </div>
 
                     <div class="service__list-item">
@@ -85,7 +85,7 @@
                         <h3>Доставка їжі</h3>
                         <p>Хочете смачний бургер, ми
                             швидко його доставимо</p>
-                        <button class="btn">Замовити доставку</button>
+                        <button class="btn" id="open-modal">Замовити доставку</button>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                             Ми в FastBox забезпечуємо максимальну швидкість і точність у доставці ваших посилок.
                             Незалежно від того, чи це невелика коробка, чи велика партія вантажу, наш сервіс гарантує,
                             що ви отримаєте свої товари вчасно та безпечно.</p>
-                        <button class="btn">Замовити доставку</button>
+                        <button class="btn" id="open-modal">Замовити доставку</button>
                     </div>
 
                 </div>
@@ -284,7 +284,7 @@
                     <div class="footer__left-social">
                         <a href="https://www.instagram.com/ythacker_228/">
                             <img src="./assets/icons/instagram.svg" alt="instagram">
-                        </a><a href="https://t.me/YTHacker1756">
+                        </a><a href="https://web.telegram.org/a/#7783405621">
                             <img src="./assets/icons/telegram.svg" alt="telegram">
                         </a><a href="https://www.tiktok.com/">
                             <img src="./assets/icons/tiktok.svg" alt="tik tok">
@@ -315,23 +315,48 @@
             </div>
         </div>
     </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
+
+
+    <div class="modal">
+        <div class="modal__window">
+            <h2>Оформлюй доставку <br> разом з FastBox</h2>
+            <form id="send-form">
+                <input required type="text" id="inp-name" placeholder="Ім'я та Прізвище">
+                <input required type="tel" id="inp-tel" placeholder="Номер телефону"
+                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="Формат: 095 456 7890">
+                <input required type="url" id="inp-url" placeholder="Посилання на товар">
+                <input required type="text" id="inp-address" placeholder="Адреса доставки">
+                <div class="form__checkbox">
+                    <input required type="checkbox" id="inp-checkbox">
+                    <label required for="inp-checkbox">Погододжуюсь на обробку персональних даних</label>
+                </div>
+                <p class="form-ok">Дякую! Ваше замовлення успішно оформлено</p>
+                <p class="form-error">Щось пішло не так... Спробуйте пізніше</p>
+                <button class="btn">Замовити доставку</button>
+            </form>
+            <button class="modal__close-btn">
+                &#128938;
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
-        },
-    });
-</script>
-<script src="/script.js"></script>
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+    </script>
+    <script src="/script.js"></script>
+</body>
 
 </html>
