@@ -663,6 +663,7 @@ footer {
     border: none;
     background: none;
     cursor: pointer;
+    color: black;
 }
 
 .modal__window h2 {
